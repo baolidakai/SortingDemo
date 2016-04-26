@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SortingDemo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUU-dK-yQy">
+                                <rect key="frame" x="0.0" y="416" width="50" height="30"/>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="Shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldX-O4-NEZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yj-Mq-ClM">
+                                <rect key="frame" x="58" y="416" width="97" height="30"/>
+                                <state key="normal" title="Selection Sort"/>
+                                <connections>
+                                    <action selector="SelectionSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2F-Ms-CBm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE3-xo-mZF">
+                                <rect key="frame" x="163" y="416" width="94" height="30"/>
+                                <state key="normal" title="Insertion Sort"/>
+                                <connections>
+                                    <action selector="InsertionSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nd5-K9-NLz"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M2H-5S-72F">
+                                <rect key="frame" x="-2" y="550" width="604" height="31"/>
+                                <connections>
+                                    <action selector="ChangeSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="RTL-A3-UJN"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Array Size: 50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lw-DN-bMa">
+                                <rect key="frame" x="0.0" y="518" width="586" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-7G-oua">
+                                <rect key="frame" x="-2" y="483" width="604" height="31"/>
+                                <connections>
+                                    <action selector="ChangePauseTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="sAH-nD-EUt"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FoA-fy-ZBb">
+                                <rect key="frame" x="-2" y="496" width="604" height="31"/>
+                                <connections>
+                                    <action selector="ChangeSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="llw-O9-ggu"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6R-3d-7TZ">
+                                <rect key="frame" x="185" y="143" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mq-Ss-8Mx">
+                                <rect key="frame" x="0.0" y="454" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khS-VF-lLH">
+                                <rect key="frame" x="0.0" y="340" width="77" height="30"/>
+                                <state key="normal" title="Merge Sort"/>
+                                <connections>
+                                    <action selector="MergeSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jyz-hE-Bwd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-RK-rhI">
+                                <rect key="frame" x="0.0" y="378" width="70" height="30"/>
+                                <state key="normal" title="Heap Sort"/>
+                                <connections>
+                                    <action selector="HeapSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2Q-kK-RLj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55L-Fq-rHS">
+                                <rect key="frame" x="78" y="378" width="73" height="30"/>
+                                <state key="normal" title="Quick Sort"/>
+                                <connections>
+                                    <action selector="QuickSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8C-tO-QzG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mR-Yr-Ye6">
+                                <rect key="frame" x="159" y="378" width="82" height="30"/>
+                                <state key="normal" title="Bubble Sort"/>
+                                <connections>
+                                    <action selector="BubbleSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaN-Mm-Ms7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UX-f6-sbE">
+                                <rect key="frame" x="85" y="340" width="67" height="30"/>
+                                <state key="normal" title="Shell Sort"/>
+                                <connections>
+                                    <action selector="ShellSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DmX-OM-tX0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M2H-5S-72F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0LS-Zj-Kx2"/>
+                            <constraint firstItem="QUU-dK-yQy" firstAttribute="top" secondItem="Xjq-RK-rhI" secondAttribute="bottom" constant="8" id="0Yl-Wn-PlM"/>
+                            <constraint firstItem="1Lw-DN-bMa" firstAttribute="top" secondItem="fM8-7G-oua" secondAttribute="bottom" constant="5" id="3Ya-Ab-zU5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Lw-DN-bMa" secondAttribute="trailing" id="5Sg-Vt-4O7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FoA-fy-ZBb" secondAttribute="trailing" constant="-20" id="Bv0-zG-fip"/>
+                            <constraint firstItem="6Yj-Mq-ClM" firstAttribute="leading" secondItem="QUU-dK-yQy" secondAttribute="trailing" constant="8" id="EBD-x9-wEf"/>
+                            <constraint firstItem="fM8-7G-oua" firstAttribute="top" secondItem="7mq-Ss-8Mx" secondAttribute="bottom" constant="8" id="ELN-Ow-9Kb"/>
+                            <constraint firstItem="Xjq-RK-rhI" firstAttribute="top" secondItem="khS-VF-lLH" secondAttribute="bottom" constant="8" id="FLb-2e-KNe"/>
+                            <constraint firstItem="aE3-xo-mZF" firstAttribute="leading" secondItem="6Yj-Mq-ClM" secondAttribute="trailing" constant="8" id="FwA-kR-UAw"/>
+                            <constraint firstItem="1Lw-DN-bMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Hgf-Vp-9fh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M2H-5S-72F" secondAttribute="bottom" constant="20" id="Jgf-jX-f6G"/>
+                            <constraint firstItem="55L-Fq-rHS" firstAttribute="top" secondItem="7UX-f6-sbE" secondAttribute="bottom" constant="8" id="L2Z-lD-e3e"/>
+                            <constraint firstItem="7mq-Ss-8Mx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LCS-Nn-x0A"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FoA-fy-ZBb" secondAttribute="leading" id="LJJ-Jp-2Va"/>
+                            <constraint firstItem="7mq-Ss-8Mx" firstAttribute="top" secondItem="6Yj-Mq-ClM" secondAttribute="bottom" constant="8" id="Lol-TW-Qo1"/>
+                            <constraint firstItem="fM8-7G-oua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="OAd-P2-UoY"/>
+                            <constraint firstItem="7mq-Ss-8Mx" firstAttribute="top" secondItem="QUU-dK-yQy" secondAttribute="bottom" constant="8" id="TCP-ui-Pg7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M2H-5S-72F" secondAttribute="trailing" constant="-20" id="VXw-PN-NzQ"/>
+                            <constraint firstItem="55L-Fq-rHS" firstAttribute="leading" secondItem="Xjq-RK-rhI" secondAttribute="trailing" constant="8" id="Z8F-BT-8Xc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7mq-Ss-8Mx" secondAttribute="trailing" constant="-20" id="av0-w4-TTf"/>
+                            <constraint firstItem="7UX-f6-sbE" firstAttribute="leading" secondItem="khS-VF-lLH" secondAttribute="trailing" constant="8" id="bPE-8W-tla"/>
+                            <constraint firstItem="aE3-xo-mZF" firstAttribute="top" secondItem="9mR-Yr-Ye6" secondAttribute="bottom" constant="8" id="faW-ea-yol"/>
+                            <constraint firstItem="Xjq-RK-rhI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mvc-X4-KTp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fM8-7G-oua" secondAttribute="trailing" constant="-20" id="nBz-wu-U8F"/>
+                            <constraint firstItem="khS-VF-lLH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s90-1N-Cdu"/>
+                            <constraint firstItem="M2H-5S-72F" firstAttribute="top" secondItem="1Lw-DN-bMa" secondAttribute="bottom" constant="8" id="vqA-qI-UHw"/>
+                            <constraint firstItem="7mq-Ss-8Mx" firstAttribute="top" secondItem="aE3-xo-mZF" secondAttribute="bottom" constant="8" id="x2Q-wk-b9O"/>
+                            <constraint firstItem="9mR-Yr-Ye6" firstAttribute="leading" secondItem="55L-Fq-rHS" secondAttribute="trailing" constant="8" id="xoO-4h-fsT"/>
+                            <constraint firstItem="6Yj-Mq-ClM" firstAttribute="top" secondItem="55L-Fq-rHS" secondAttribute="bottom" constant="8" id="zUJ-Th-o7R"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FoA-fy-ZBb"/>
+                                <exclude reference="g6R-3d-7TZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Size" destination="1Lw-DN-bMa" id="Fzu-rZ-Pg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="203"/>
+        </scene>
+    </scenes>
+</document>
